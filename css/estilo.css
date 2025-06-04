@@ -5,19 +5,29 @@ html {
 }
 
 main {
-    background-image: url(/img/portada.jpg);
+    background-image: url("/img/portada.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     position: sticky;
-    top: 0px;
-    right: 10px;
+    top: 0;
     background-color: #247c80;
     width: 100%;
     height: 25%;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0);
+}
+
+.anim {
+    transition: transform 2s ease-in-out;
+}
+
+.anim:hover {
+    transform: scale(1.5);
 }
 
 .h1-clase:hover {
@@ -30,11 +40,23 @@ header {
     
 
 nav {
+    
     font-family: "EB Garamond", serif;
 }
 
-.titulo {
-    font-weight: 400;
+.nav {
+    height: auto;
+    margin: 3%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    padding: 10px;
 }
 
 ul {
@@ -43,21 +65,16 @@ ul {
 }
 
 li a {
+    color: inherit;
     text-decoration: none;
+    font-weight: 500;
 }
-
-.recuadro {
-    color: yellow;
-    font-size: 3em;
-
-    width: 50%;
-    height: 150px;
-    background-color: brown;
-    border: 3px solid blue;
-}
+    
 
 footer {
+    text-align: center;
     background-color: #247c80;
+    box-shadow: 0px 3px 6px rgb(0, 0, 0);
 }
 
 .fa-instagram {
@@ -85,8 +102,20 @@ footer {
 
 }
 
+
+
+.grilla {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
 .item {
-    border: 3px solid red;
-    height: auto;
-    width: 100px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    text-align: center;
+    width: 100%;
 }
